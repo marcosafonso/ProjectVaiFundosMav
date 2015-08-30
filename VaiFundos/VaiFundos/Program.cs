@@ -10,7 +10,7 @@ namespace VaiFundos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Teste ");
+            Console.WriteLine("Teste 1");
             Console.WriteLine("Hello Git Hub :), Um pequeno passo para o homem, um grande passo para humanidade!");
             Console.ReadKey();
         }
