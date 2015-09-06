@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VaiFundos
 {
-    class Cliente
+    class Cliente   
     {
         private int codigo;
         private string nome;

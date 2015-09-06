@@ -11,6 +11,7 @@ namespace VaiFundos
         private int codigo;
         private string nome;
         private string sigla;
+        private List<Aplicacao> aplicacoes;
 
 
         public void setCodigo(int codigo)
@@ -22,7 +23,6 @@ namespace VaiFundos
         {
             return codigo;
         }
-
         
         public void setNome(string nome)
         {
@@ -222,7 +222,12 @@ namespace VaiFundos
             Console.ReadKey();
         }
 
-        public void resgate(double valorResgate)
+        public void inserirAplicacao(Aplicacao ap)
+        {
+
+        }
+
+        public void resgate(double valorResgate, int codCliente)
         {
 
         }

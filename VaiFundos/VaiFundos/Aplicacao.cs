@@ -9,7 +9,7 @@ namespace VaiFundos
     class Aplicacao
     {
         private int codCliente;
-        private string nomeAplicacao;
+        private FundoInvestimento nomeAplicacao;
         private double valor;
 
         public int getCodCliente()
