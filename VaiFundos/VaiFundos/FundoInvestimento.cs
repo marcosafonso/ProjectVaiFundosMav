@@ -222,7 +222,10 @@ namespace VaiFundos
             Console.ReadKey();
         }
 
+        public void resgate(double valorResgate)
+        {
 
+        }
 
 
     }
