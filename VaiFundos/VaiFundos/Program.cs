@@ -37,7 +37,7 @@ namespace VaiFundos
             fundo.novaAplicacao(apl2);
 
             //tentar fazer o resgate 
-            fundo.resgate(1000f, 1);
+            fundo.resgate(1200f, 1);
 
 
             Console.ReadKey();
