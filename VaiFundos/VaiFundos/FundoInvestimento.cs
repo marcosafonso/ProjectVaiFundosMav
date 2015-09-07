@@ -12,7 +12,7 @@ namespace VaiFundos
         private string nome;
         private string sigla;
         private List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
-
+        
 
         public void setCodigo(int codigo)
         {
@@ -44,11 +44,11 @@ namespace VaiFundos
             return sigla;
         }
 
-        public void calcularNotasReal(float num)
+        public void calcularNotasReais(float num)
         {
             float valor = num;
             int qtd100 = 0, qtd50 = 0, qtd20 = 0, qtd10 = 0, qtd5 = 0, qtd2 = 0;
-            
+
             float aux = valor;
 
             while (aux > 0)
@@ -232,20 +232,21 @@ namespace VaiFundos
         }
 
         /// <summary>
-        /// metodo para resgatar uma aplicacao de um cliente especifico (incompleta)
+        /// metodo para resgatar uma aplicacao de um cliente especifico 
         /// </summary>
         /// <param name="valorResgate"></param>
         /// <param name="codCliente"></param>
-        public void resgate(double valorResgate, int codCliente)
+      
+        public void resgate(float valorResgate, int codCliente)
         {
-           //para cada aplicacao na lista de aplicacoes desse fundo:
             foreach(Aplicacao apli in aplicacoes)
             {  
                 if(apli.getCodCliente()==codCliente && apli.getValor()==valorResgate)
                 {
                     Console.WriteLine("Resgate Válidado.");
-
-                }   
+                    this.calcularNotasReais(valorResgate);
+                    break;
+                 }   
             }
 
         }
