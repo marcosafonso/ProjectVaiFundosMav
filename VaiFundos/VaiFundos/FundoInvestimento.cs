@@ -11,8 +11,16 @@ namespace VaiFundos
         private int codigo;
         private string nome;
         private string sigla;
-        private List<Aplicacao> aplicacoes;
+        private List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
 
+        /// <summary>
+        /// Método para adicionar um objeto aplicacao na lista de aplicacoes
+        /// </summary>
+        /// <param name="aplicacao"></param>
+        public void novaAplicacao(Aplicacao aplicacao)
+        {
+            this.aplicacoes.Add(aplicacao);
+        }
 
 
         public void setCodigo(int codigo)
