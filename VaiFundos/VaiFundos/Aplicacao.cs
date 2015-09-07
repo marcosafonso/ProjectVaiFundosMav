@@ -9,7 +9,7 @@ namespace VaiFundos
     class Aplicacao
     {
         private int codCliente;
-        private string nomeAplicacao;
+        private FundoInvestimento nomeAplicacao;
         private double valor;
         private FundoInvestimento nome;
 
@@ -32,5 +32,7 @@ namespace VaiFundos
         {
             return valor;
         } 
+
+        
     }
 }

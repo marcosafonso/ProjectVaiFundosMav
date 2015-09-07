@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VaiFundos
 {
-    class Cliente
+    class Cliente   
     {
         private int codigo;
         private string nome;
@@ -20,7 +20,7 @@ namespace VaiFundos
         {
             this.codigo = codigo;
         }
-        //
+        
         public string getNome()
         {
             return nome;

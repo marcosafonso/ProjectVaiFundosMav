@@ -11,7 +11,7 @@ namespace VaiFundos
         private int codigo;
         private string nome;
         private string sigla;
-        private string moeda;
+        private List<Aplicacao> aplicacoes;
 
 
         public void setCodigo(int codigo)
@@ -23,7 +23,6 @@ namespace VaiFundos
         {
             return codigo;
         }
-
         
         public void setNome(string nome)
         {
@@ -44,9 +43,6 @@ namespace VaiFundos
         {
             return sigla;
         }
-
-
-        
 
         public void calcularNotasReal(float num)
         {
@@ -226,7 +222,15 @@ namespace VaiFundos
             Console.ReadKey();
         }
 
+        public void inserirAplicacao(Aplicacao ap)
+        {
 
+        }
+
+        public void resgate(double valorResgate, int codCliente)
+        {
+
+        }
 
 
     }
