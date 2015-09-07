@@ -11,14 +11,19 @@ namespace VaiFundos
         private int codCliente;
         private FundoInvestimento nomeAplicacao;
         private double valor;
-        private FundoInvestimento nome;
+        
 
         public int getCodCliente()
         {
             return codCliente;
         }
 
-        public string getNomeApli()
+        public void setCodCliente(int codCliente)
+        {
+           this.codCliente = codCliente;
+        }
+
+        public FundoInvestimento getNomeApli()
         {
             return nomeAplicacao;
         }

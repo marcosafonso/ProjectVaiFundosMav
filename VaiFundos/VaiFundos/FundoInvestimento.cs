@@ -14,6 +14,7 @@ namespace VaiFundos
         private List<Aplicacao> aplicacoes;
 
 
+
         public void setCodigo(int codigo)
         {
             this.codigo = codigo;
