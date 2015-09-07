@@ -13,14 +13,7 @@ namespace VaiFundos
         private string sigla;
         private List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
 
-        /// <summary>
-        /// Método para adicionar um objeto aplicacao na lista de aplicacoes
-        /// </summary>
-        /// <param name="aplicacao"></param>
-        public void novaAplicacao(Aplicacao aplicacao)
-        {
-            this.aplicacoes.Add(aplicacao);
-        }
+        
 
 
         public void setCodigo(int codigo)
@@ -231,14 +224,30 @@ namespace VaiFundos
             Console.ReadKey();
         }
 
-        public void inserirAplicacao(Aplicacao ap)
+        /// <summary>
+        /// Método para adicionar um objeto aplicacao na lista de aplicacoes
+        /// </summary>
+        /// <param name="aplicacao"></param>
+        public void novaAplicacao(Aplicacao aplicacao)
         {
-
+            this.aplicacoes.Add(aplicacao);
         }
+
 
         public void resgate(double valorResgate, int codCliente)
         {
-
+           
+            foreach(Aplicacao apli in aplicacoes)
+            {
+                if(apli.getCodCliente()==codCliente && apli.getValor()==valorResgate)
+                {
+                    Console.WriteLine("Resgate Válidado.");
+                }
+                else
+                {
+                    Console.WriteLine("Operação de Resgate não existe.");
+                }
+            }
         }
 
 

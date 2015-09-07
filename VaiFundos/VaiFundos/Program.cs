@@ -26,6 +26,7 @@ namespace VaiFundos
 
             fundo.novaAplicacao(apl1);
 
+            fundo.resgate(601f, 1);
 
 
             Console.ReadKey();
