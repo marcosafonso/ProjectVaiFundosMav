@@ -13,8 +13,6 @@ namespace VaiFundos
         private string sigla;
         private List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
 
-        
-
 
         public void setCodigo(int codigo)
         {
@@ -233,21 +231,23 @@ namespace VaiFundos
             this.aplicacoes.Add(aplicacao);
         }
 
-
+        /// <summary>
+        /// metodo para resgatar uma aplicacao de um cliente especifico (incompleta)
+        /// </summary>
+        /// <param name="valorResgate"></param>
+        /// <param name="codCliente"></param>
         public void resgate(double valorResgate, int codCliente)
         {
-           
+           //para cada aplicacao na lista de aplicacoes desse fundo:
             foreach(Aplicacao apli in aplicacoes)
-            {
+            {  
                 if(apli.getCodCliente()==codCliente && apli.getValor()==valorResgate)
                 {
                     Console.WriteLine("Resgate Válidado.");
-                }
-                else
-                {
-                    Console.WriteLine("Operação de Resgate não existe.");
-                }
+
+                }   
             }
+
         }
 
 

@@ -9,7 +9,7 @@ namespace VaiFundos
     class Aplicacao
     {
         private int codCliente;
-        private FundoInvestimento nomeAplicacao;
+        private FundoInvestimento nomeAplicacao;// talvez nao seja necessaria 
         private double valor;
         
 
