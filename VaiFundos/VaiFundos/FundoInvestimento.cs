@@ -12,7 +12,7 @@ namespace VaiFundos
         private string nome;
         private string sigla;
         private List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
-        
+        private string moeda;
 
         public void setCodigo(int codigo)
         {
@@ -23,7 +23,7 @@ namespace VaiFundos
         {
             return codigo;
         }
-        
+
         public void setNome(string nome)
         {
             this.nome = nome;
@@ -43,6 +43,17 @@ namespace VaiFundos
         {
             return sigla;
         }
+        //
+        public void setMoeda(string moeda)
+        {
+            this.moeda = moeda;
+        }
+
+        public string getMoeda()
+        {
+            return moeda;
+        }
+
 
         public void calcularNotasReais(float num)
         {
@@ -128,11 +139,12 @@ namespace VaiFundos
             Console.ReadKey();
         }
 
+
         public void calcularNotasDolar(float num)
         {
             float valor = num;
             int qtd100 = 0, qtd50 = 0, qtd20 = 0, qtd10 = 0, qtd5 = 0, qtd2 = 0, qtd1 = 0;
-            
+
             float aux = valor;
 
             while (aux > 0)
@@ -175,7 +187,7 @@ namespace VaiFundos
 
                 if (aux > 0 & aux < 2)
                 {
-                    if(aux < 1)
+                    if (aux < 1)
                     {
                         aux = 1;
                     }
@@ -236,21 +248,37 @@ namespace VaiFundos
         /// </summary>
         /// <param name="valorResgate"></param>
         /// <param name="codCliente"></param>
-      
+
+
+
+
         public void resgate(float valorResgate, int codCliente)
         {
-            foreach(Aplicacao apli in aplicacoes)
-            {  
-                if(apli.getCodCliente()==codCliente && apli.getValor()==valorResgate)
+
+            foreach (Aplicacao apli in aplicacoes)
+            {
+                if (apli.getCodCliente() == codCliente && apli.getValor() == valorResgate)
                 {
                     Console.WriteLine("Resgate Válidado.");
                     this.calcularNotasReais(valorResgate);
                     break;
-                 }   
+                }
             }
 
         }
 
+       /* public void calculaRemuneracao(Aplicacao aplicacao)
+        {
+           int anosAplicados = (DateTime.Today.Subtract(aplicacao.getDataAplicacao()).Days / 365);
+           double valorAplicacao = aplicacao.getValor();
+
+            if(anosAplicados>1)
+            {
+                valorAplicacao += valorAplicacao * 0.05;
+                aplicacao.setValor(valorAplicacao);
+            }
+        }
+        */
 
     }
 }

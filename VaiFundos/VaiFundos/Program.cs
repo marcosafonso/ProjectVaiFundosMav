@@ -26,19 +26,19 @@ namespace VaiFundos
             Aplicacao apl1 = new Aplicacao();
             apl1.setCodCliente(1);
             apl1.setValor(600f);
-
+            
             //outra aplicacao do mesmo cliente
             Aplicacao apl2 = new Aplicacao();
             apl2.setCodCliente(1);
             apl2.setValor(1200f);
+            apl2.setDataAplicacao(Convert.ToDateTime("27/01/2013"));
 
             //chamar metodo de FundoInvestimento para adicionar a aplicacao nova
             fundo.novaAplicacao(apl1);
             fundo.novaAplicacao(apl2);
 
             //tentar fazer o resgate 
-            fundo.resgate(1200f, 1);
-
+            fundo.resgate(600f, 1);
 
             Console.ReadKey();
             

@@ -11,7 +11,7 @@ namespace VaiFundos
         private int codCliente;
         private FundoInvestimento nomeAplicacao;// talvez nao seja necessaria 
         private double valor;
-        
+        private DateTime dataAplicacao; //data que a aplicacao foi registrada
 
         public int getCodCliente()
         {
@@ -36,6 +36,17 @@ namespace VaiFundos
         public double getValor()
         {
             return valor;
+        } 
+
+        //
+        public void setDataAplicacao(DateTime dataAplicacao)
+        {
+            this.dataAplicacao = dataAplicacao;
+        }
+
+        public DateTime getDataAplicacao()
+        {
+            return dataAplicacao;
         } 
 
         
