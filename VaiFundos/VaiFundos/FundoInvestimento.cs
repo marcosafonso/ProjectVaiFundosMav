@@ -249,9 +249,6 @@ namespace VaiFundos
         /// <param name="valorResgate"></param>
         /// <param name="codCliente"></param>
 
-
-
-
         public void resgate(float valorResgate, int codCliente)
         {
 
@@ -262,8 +259,11 @@ namespace VaiFundos
                     Console.WriteLine("Resgate Válidado.");
                     this.calcularNotasReais(valorResgate);
                     break;
-                }
+                }          
+
             }
+            Console.WriteLine("Resgate Negado.");
+            Console.WriteLine("Só é possível resgatar um valor igual a uma das aplicações.");
 
         }
 
