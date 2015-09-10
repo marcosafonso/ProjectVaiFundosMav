@@ -54,7 +54,7 @@ namespace VaiFundos
             return moeda;
         }
 
-
+        /*
         public void calcularNotasReais(float num)
         {
             float valor = num;
@@ -158,7 +158,7 @@ namespace VaiFundos
             Console.WriteLine("********************************");
             Console.ReadKey();
         }
-
+        */
 
         public void calcularNotasDolar(float num)
         {
@@ -321,6 +321,8 @@ namespace VaiFundos
             }
         }
         */
+
+            
 
     }
 }
