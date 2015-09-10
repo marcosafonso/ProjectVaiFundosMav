@@ -266,6 +266,29 @@ namespace VaiFundos
             }
 
         }
+        //gerar relatório de um  cliente especifico
+        public void relatorioPorCliente(int codCliente)
+        {
+            foreach(Aplicacao apli in aplicacoes)
+            {
+                if(apli.getCodCliente()==codCliente)
+                {
+                    apli.imprimeAplicacao();
+                }
+            }
+        }
+
+        //gerar relatorio de todas aplicacoes de um fundo
+        public void relatorioAplicacoes()
+        {
+            foreach (Aplicacao apli in aplicacoes)
+            {
+               
+                    apli.imprimeAplicacao();
+            }
+        }
+
+
 
        /* public void calculaRemuneracao(Aplicacao aplicacao)
         {
