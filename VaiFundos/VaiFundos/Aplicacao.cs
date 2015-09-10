@@ -49,6 +49,9 @@ namespace VaiFundos
             return dataAplicacao;
         } 
 
-        
+        public void imprimeAplicacao()
+        {
+            Console.WriteLine("Código Cliente: {0}\nValor: {1},\nData:{2}\n-------------",this.getCodCliente(),this.getValor(),this.getDataAplicacao());
+        }
     }
 }
