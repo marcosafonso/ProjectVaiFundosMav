@@ -128,12 +128,32 @@ namespace VaiFundos
 
             Console.WriteLine("********************************");
             Console.WriteLine();
-            Console.WriteLine("Notas de 100: " + qtd100);
-            Console.WriteLine("Notas de 50: " + qtd50);
-            Console.WriteLine("Notas de 20: " + qtd20);
-            Console.WriteLine("Notas de 10: " + qtd10);
-            Console.WriteLine("Notas de 5: " + qtd5);
-            Console.WriteLine("Notas de 2: " + qtd2);
+            //Exibe somente as notas que forem usadas
+            if (qtd100 > 0)
+            {
+                Console.WriteLine("Notas de 100: " + qtd100);
+            }
+            if (qtd50 > 0)
+            {
+                Console.WriteLine("Notas de 50: " + qtd50);
+            }
+            if (qtd20 > 0)
+            {
+                Console.WriteLine("Notas de 20: " + qtd20);
+            }
+            if (qtd10 > 0)
+            {
+                Console.WriteLine("Notas de 10: " + qtd10);
+            }
+            if (qtd5 > 0)
+            {
+                Console.WriteLine("Notas de 5: " + qtd5);
+            }
+            if (qtd2 > 0)
+            {
+                Console.WriteLine("Notas de 2: " + qtd2);
+            }
+
             Console.WriteLine();
             Console.WriteLine("********************************");
             Console.ReadKey();
@@ -222,13 +242,35 @@ namespace VaiFundos
 
             Console.WriteLine("********************************");
             Console.WriteLine();
-            Console.WriteLine("Notas de 100: " + qtd100);
-            Console.WriteLine("Notas de 50: " + qtd50);
-            Console.WriteLine("Notas de 20: " + qtd20);
-            Console.WriteLine("Notas de 10: " + qtd10);
-            Console.WriteLine("Notas de 5: " + qtd5);
-            Console.WriteLine("Notas de 2: " + qtd2);
-            Console.WriteLine("Notas de 1: " + qtd1);
+            //Exibe somente as notas que forem usadas
+            if (qtd100 > 0)
+            {
+                Console.WriteLine("Notas de 100: " + qtd100);
+            }
+            if (qtd50 > 0)
+            {
+                Console.WriteLine("Notas de 50: " + qtd50);
+            }
+            if (qtd20 > 0)
+            {
+                Console.WriteLine("Notas de 20: " + qtd20);
+            }
+            if (qtd10 > 0)
+            {
+                Console.WriteLine("Notas de 10: " + qtd10);
+            }
+            if (qtd5 > 0)
+            {
+                Console.WriteLine("Notas de 5: " + qtd5);
+            }
+            if (qtd2 > 0)
+            {
+                Console.WriteLine("Notas de 2: " + qtd2);
+            }
+            if (qtd1 > 0)
+            {
+                Console.WriteLine("Notas de 1: " + qtd1);
+            }
             Console.WriteLine();
             Console.WriteLine("********************************");
             Console.ReadKey();
@@ -249,9 +291,6 @@ namespace VaiFundos
         /// <param name="valorResgate"></param>
         /// <param name="codCliente"></param>
 
-
-
-
         public void resgate(float valorResgate, int codCliente)
         {
 
@@ -262,8 +301,11 @@ namespace VaiFundos
                     Console.WriteLine("Resgate Válidado.");
                     this.calcularNotasReais(valorResgate);
                     break;
-                }
+                }          
+
             }
+            Console.WriteLine("Resgate Negado.");
+            Console.WriteLine("Só é possível resgatar um valor igual a uma das aplicações.");
 
         }
         //gerar relatório de um  cliente especifico

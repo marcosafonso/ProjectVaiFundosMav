@@ -27,11 +27,11 @@ namespace VaiFundos
             apl1.setCodCliente(1);
             apl1.setValor(600f);
             apl1.setDataAplicacao(Convert.ToDateTime("28/12/2013"));
-
+            
             //outra aplicacao do mesmo cliente
             Aplicacao apl2 = new Aplicacao();
             apl2.setCodCliente(1);
-            apl2.setValor(1200f);
+            apl2.setValor(1227f);
             apl2.setDataAplicacao(Convert.ToDateTime("27/01/2013"));
 
             //terceira aplicacao do mesmo cliente
@@ -51,7 +51,7 @@ namespace VaiFundos
             //relatorio aplicacoes por cliente
             fundo.relatorioPorCliente(1);
 
-           
+
             Console.ReadKey();
             
         }
