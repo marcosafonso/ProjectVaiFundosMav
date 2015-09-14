@@ -16,6 +16,7 @@ namespace VaiFundos
             fundo.setNome("Fundo DI");
             fundo.setCodigo(12);
             fundo.setSigla("DI");
+            fundo.setMoeda("Real");
 
             //criar um cliente 
             Cliente cli = new Cliente();
@@ -46,11 +47,10 @@ namespace VaiFundos
             fundo.novaAplicacao(apl3);
 
             //tentar fazer o resgate 
-            //fundo.resgate(600f, 1);
+            fundo.resgate(600f, 1);
 
             //relatorio aplicacoes por cliente
-            fundo.relatorioPorCliente(1);
-
+            //fundo.relatorioPorCliente(1);
 
             Console.ReadKey();
             

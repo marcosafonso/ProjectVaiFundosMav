@@ -54,10 +54,12 @@ namespace VaiFundos
             return moeda;
         }
 
-        /*
+        
         public void calcularNotasReais(float num)
         {
-            float valor = num;
+            //descontando IRRF
+            float valor = num - num*0.20f;
+            Console.WriteLine("Valor Após Desconto IRRF: {0}", valor);
             int qtd100 = 0, qtd50 = 0, qtd20 = 0, qtd10 = 0, qtd5 = 0, qtd2 = 0;
 
             float aux = valor;
@@ -158,11 +160,13 @@ namespace VaiFundos
             Console.WriteLine("********************************");
             Console.ReadKey();
         }
-        */
+        
 
         public void calcularNotasDolar(float num)
         {
-            float valor = num;
+            // descontar IOF
+            float valor = num - num*0.01f;
+            Console.WriteLine("Valor com desconto IOF:{0}",valor);
             int qtd100 = 0, qtd50 = 0, qtd20 = 0, qtd10 = 0, qtd5 = 0, qtd2 = 0, qtd1 = 0;
 
             float aux = valor;
@@ -240,7 +244,7 @@ namespace VaiFundos
 
             }
 
-            Console.WriteLine("********************************");
+            Console.WriteLine("**************Dolar**************");
             Console.WriteLine();
             //Exibe somente as notas que forem usadas
             if (qtd100 > 0)
@@ -293,21 +297,36 @@ namespace VaiFundos
 
         public void resgate(float valorResgate, int codCliente)
         {
-
+            bool encontrou = false;
             foreach (Aplicacao apli in aplicacoes)
             {
+               
                 if (apli.getCodCliente() == codCliente && apli.getValor() == valorResgate)
                 {
                     Console.WriteLine("Resgate Válidado.");
-                    this.calcularNotasReais(valorResgate);
-                    break;
+                    encontrou = true;
+                    if (moeda.Equals("Real"))
+                    {
+                        this.calcularNotasReais(valorResgate);
+                        break;
+                    }
+                    else if(moeda.Equals("Dolar"))
+                    {
+                        this.calcularNotasDolar(valorResgate);
+                        break;
+                    }                    
                 }          
 
             }
-            Console.WriteLine("Resgate Negado.");
-            Console.WriteLine("Só é possível resgatar um valor igual a uma das aplicações.");
+            if(encontrou == false)
+            {
+                Console.WriteLine("Resgate Negado.");
+                Console.WriteLine("Só é possível resgatar um valor igual a uma das aplicações.");
 
+            }
+            
         }
+
         //gerar relatório de um  cliente especifico
         public void relatorioPorCliente(int codCliente)
         {
