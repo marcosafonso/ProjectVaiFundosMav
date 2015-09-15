@@ -53,6 +53,15 @@ namespace VaiFundos
             this.endereco = endereco;
         }
 
+        public virtual void imprimirCliente()
+        {
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Nome: {0}", nome);
+            Console.WriteLine("Códido: {0}", codigo);
+            Console.WriteLine("Telefone: {0}", numero);
+            Console.WriteLine("Endereço: {0}", endereco);
+            Console.WriteLine("------------------------------------------");
+        }
 
     }
 }
