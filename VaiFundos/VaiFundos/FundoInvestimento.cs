@@ -11,7 +11,7 @@ namespace VaiFundos
         private int codigo;
         private string nome;
         private string sigla;
-        private List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
+        protected List<Aplicacao> aplicacoes = new List<Aplicacao>(10);
         private string moeda;
 
         public void setCodigo(int codigo)
@@ -53,7 +53,6 @@ namespace VaiFundos
         {
             return moeda;
         }
-
         
         public void calcularNotasReais(float num)
         {
@@ -305,12 +304,12 @@ namespace VaiFundos
                 {
                     Console.WriteLine("Resgate Válidado.");
                     encontrou = true;
-                    if (moeda.Equals("Real"))
+                    if (this.moeda.Equals("Real"))
                     {
-                        this.calcularNotasReais(valorResgate);
+                        this.calcularNotasReais(valorResgate);                        
                         break;
                     }
-                    else if(moeda.Equals("Dolar"))
+                    else if(this.moeda.Equals("Dolar"))
                     {
                         this.calcularNotasDolar(valorResgate);
                         break;
@@ -349,7 +348,31 @@ namespace VaiFundos
             }
         }
 
+        public void trasferirAplicacoes(FundoInvestimento fi)
+        {
+            // Verificando se a moeda do fundo passado como parâmetro
+            // é igual ao do fundo que está recebendo
+            if (fi.getMoeda() == this.getMoeda())
+            {
+                foreach (Aplicacao apli in fi.aplicacoes)
+                {               
+                    if (fi.getMoeda().Equals("Real"))
+                    {                        
+                        double aux = apli.getValor();
+                        apli.setValor(aux - 10);
+                        this.novaAplicacao(apli);
+                    }
+                    else
+                    {
+                        this.novaAplicacao(apli);
+                    }
+                }
 
+                //Limpando a lista de aplicações do FI passado por parâmetro
+                fi.aplicacoes.Clear();                
+            }
+
+        }
 
        /* public void calculaRemuneracao(Aplicacao aplicacao)
         {
