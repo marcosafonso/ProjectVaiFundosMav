@@ -8,8 +8,10 @@ namespace VaiFundos
 {
     class Cliente   
     {
-        private int codigo;
-        private string nome;
+        protected int codigo;
+        protected string nome;
+        protected string numero;
+        protected string endereco;
 
         public int getCodigo()
         {
@@ -30,6 +32,27 @@ namespace VaiFundos
         {
             this.nome = nome;
         }
+
+        public string getNumero()
+        {
+            return numero;
+        }
+
+        public void setNumero(string numero)
+        {
+            this.numero = numero;
+        }
+
+        public string getEndereco()
+        {
+            return endereco;
+        }
+
+        public void setEndereco(string endereco)
+        {
+            this.endereco = endereco;
+        }
+
 
     }
 }

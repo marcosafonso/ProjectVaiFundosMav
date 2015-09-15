@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="Cliente_Fisico.cs" />
+    <Compile Include="Cliente_Juridico.cs" />
     <Compile Include="FundoInvestimento.cs" />
     <Compile Include="Aplicacao.cs" />
     <Compile Include="Moeda.cs" />
