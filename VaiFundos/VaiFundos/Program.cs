@@ -10,22 +10,7 @@ namespace VaiFundos
     {
         static void Main(string[] args)
         {   
-            List<String> nome = new List<string>();
-            string[] nomes;
-
-            nome.Add("Elielson");
-            nome.Add("Adyssom");
-            nome.Add("Erickson");
-            nome.Add("Marcos");
-            nome.Add("Flávio");
-            nome.Add("Danielle");
-            nome.Add("Raul");
-
-            while(nome. != null)
-
-
             
-            /*
             //criar um fundo
             FundoInvestimento fundo = new FundoInvestimento();
 
@@ -67,7 +52,6 @@ namespace VaiFundos
 
             //relatorio aplicacoes por cliente
             //fundo.relatorioPorCliente(1);
-             * */
 
             Console.ReadKey();
             

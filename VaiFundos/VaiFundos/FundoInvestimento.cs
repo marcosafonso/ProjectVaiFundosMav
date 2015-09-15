@@ -348,7 +348,7 @@ namespace VaiFundos
             }
         }
 
-        public void trasferirAplicacoes(FundoInvestimento fi)
+        public void trasferirAplicacoes(FundoInvestimento fi, int codigoC)
         {
             // Verificando se a moeda do fundo passado como parâmetro
             // é igual ao do fundo que está recebendo
@@ -356,13 +356,13 @@ namespace VaiFundos
             {
                 foreach (Aplicacao apli in fi.aplicacoes)
                 {               
-                    if (fi.getMoeda().Equals("Real"))
+                    if (fi.getMoeda().Equals("Real") && apli.getCodCliente() == codigoC)
                     {                        
                         double aux = apli.getValor();
                         apli.setValor(aux - 10);
                         this.novaAplicacao(apli);
                     }
-                    else
+                    else if (fi.getMoeda().Equals("Dolar") && apli.getCodCliente() == codigo)
                     {
                         this.novaAplicacao(apli);
                     }
