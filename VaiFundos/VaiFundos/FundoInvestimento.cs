@@ -362,7 +362,7 @@ namespace VaiFundos
                         apli.setValor(aux - 10);
                         this.novaAplicacao(apli);
                     }
-                    else if (fi.getMoeda().Equals("Dolar") && apli.getCodCliente() == codigo)
+                    else if (fi.getMoeda().Equals("Dolar") && apli.getCodCliente() == codigoC)
                     {
                         this.novaAplicacao(apli);
                     }
