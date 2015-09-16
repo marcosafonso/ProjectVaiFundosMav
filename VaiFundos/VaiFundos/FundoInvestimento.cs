@@ -348,6 +348,15 @@ namespace VaiFundos
             }
         }
 
+        public void relatorioAplicacoesMensal()
+        {
+            foreach (Aplicacao apli in this.aplicacoes)
+            {
+
+                apli.imprimeAplicacao();
+            }
+        }
+
         public void trasferirAplicacoes(FundoInvestimento fi, int codigoC)
         {
             // Verificando se a moeda do fundo passado como parâmetro
@@ -374,18 +383,23 @@ namespace VaiFundos
 
         }
 
-       /* public void calculaRemuneracao(Aplicacao aplicacao)
+        public void calculaRemuneracao()
         {
-           int anosAplicados = (DateTime.Today.Subtract(aplicacao.getDataAplicacao()).Days / 365);
-           double valorAplicacao = aplicacao.getValor();
-
-            if(anosAplicados>1)
+            foreach(Aplicacao ap in this.aplicacoes)
             {
-                valorAplicacao += valorAplicacao * 0.05;
-                aplicacao.setValor(valorAplicacao);
+                int anosAplicados = (DateTime.Today.Subtract(ap.getDataAplicacao()).Days / 365);
+                double valorAplicacao = ap.getValor();
+
+                if (anosAplicados > 1)
+                {
+                    valorAplicacao += valorAplicacao * 0.05;
+                    ap.setValor(valorAplicacao);
+                }
+
             }
+
+           
         }
-        */
 
             
 
