@@ -78,7 +78,7 @@ namespace VaiFundos
                         Console.Write("Endereço do cliente: ");
                         cli.setEndereco(Console.ReadLine());
                         clientes.Add(cli);
-                        Console.WriteLine(cli.getCodigo());
+                        Console.WriteLine("Código do cliente: {0} ", cli.getCodigo());
                     }
                     else if (tipoCliente == 2)
                     {
